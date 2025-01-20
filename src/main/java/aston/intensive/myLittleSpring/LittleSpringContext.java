@@ -39,11 +39,8 @@ public class LittleSpringContext implements IContext {
 
     private Object getInstance(Seed classSeed) {
         try {
-            if (classSeed.argTypes().length != 0) {
-                var args = getArgs(classSeed);
-                return classSeed.constructor().newInstance(args);
-            }
-            return classSeed.constructor().newInstance();
+            var args = getArgs(classSeed);
+            return classSeed.constructor().newInstance(args);
         } catch (InstantiationException | IllegalAccessException | InvocationTargetException e) {
             throw new RuntimeException(e);
         }

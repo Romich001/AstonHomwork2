@@ -1,20 +1,20 @@
 package aston.intensive.model.subpackage;
 
-import aston.intensive.model.SomeClass;
+import aston.intensive.model.TikTokGirl;
 import aston.intensive.myLittleSpring.annotations.IntensiveComponent;
 
 @IntensiveComponent
-public class AnotherClass {
+public class BoardGame {
 
-    private final SomeClass someClass;
+    private final TikTokGirl tikTokGirl;
 
-    public AnotherClass(SomeClass someClass) {
-        this.someClass = someClass;
+    public BoardGame(TikTokGirl tikTokGirl) {
+        this.tikTokGirl = tikTokGirl;
     }
 
 
     public void go() {
-        someClass.run();
+        tikTokGirl.run();
         System.out.println("AnotherClass.go() is called");
     }
 }
